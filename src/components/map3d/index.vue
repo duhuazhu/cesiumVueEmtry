@@ -4,7 +4,7 @@
 
 <script>
 import {inject, onMounted,getCurrentInstance} from 'vue'
-import CesiumViewer from "@/component/map3d/initMap"
+import CesiumViewer from "@/components/map3d/initMap"
 let viewer = new CesiumViewer();
 export default {
   name: "map3d",

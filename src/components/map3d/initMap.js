@@ -17,7 +17,7 @@ class CesiumViewer{
      * @returns {Promise<resolve>}  返回Viewer
      */
     init($el){
-        return new Promise(((resolve, reject) => {
+        return new Promise(((resolve) => {
             Ion.defaultAccessToken = cesium_ion;
             /* eslint no-new: */
            let ViewerGlobe =  new Viewer($el,{
@@ -34,7 +34,6 @@ class CesiumViewer{
                 selectionIndicator: false, // 是否显示选取指示器组件(聚焦框)
                 terrainProvider: new createWorldTerrain(),
                 showRenderLoopErrors: true, // 如果设为true，将在一个HTML面板中显示错误信息
-                imageryProvider:false
             })
             this.view = ViewerGlobe;
             resolve(ViewerGlobe)
